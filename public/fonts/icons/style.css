@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'OMath-Editor';
+  src:  url('fonts/OMath-Editor.eot?4yx007');
+  src:  url('fonts/OMath-Editor.eot?4yx007#iefix') format('embedded-opentype'),
+    url('fonts/OMath-Editor.ttf?4yx007') format('truetype'),
+    url('fonts/OMath-Editor.woff?4yx007') format('woff'),
+    url('fonts/OMath-Editor.svg?4yx007#OMath-Editor') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ie-"], [class*=" ie-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'OMath-Editor' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ie-file-import:before {
+  content: "\e91b";
+}
+.ie-file-zipper:before {
+  content: "\e91a";
+}
+.ie-clone:before {
+  content: "\e919";
+}
+.ie-pen-to-square:before {
+  content: "\e918";
+}
+.ie-trash-can:before {
+  content: "\e917";
+}
+.ie-database:before {
+  content: "\e915";
+}
+.ie-files:before {
+  content: "\e916";
+}
+.ie-folder-plus:before {
+  content: "\e914";
+}
+.ie-hashtag:before {
+  content: "\e913";
+}
+.ie-display:before {
+  content: "\e90f";
+}
+.ie-tablet:before {
+  content: "\e910";
+}
+.ie-mobile:before {
+  content: "\e911";
+}
+.ie-sun-and-moon:before {
+  content: "\e912";
+}
+.ie-grip-vertical:before {
+  content: "\e90e";
+}
+.ie-circle-check:before {
+  content: "\e90d";
+}
+.ie-arrows-rotate:before {
+  content: "\e90b";
+}
+.ie-floppy-disk:before {
+  content: "\e90c";
+}
+.ie-topic-article:before {
+  content: "\e908";
+}
+.ie-topic-practicum:before {
+  content: "\e909";
+}
+.ie-topic-summary:before {
+  content: "\e90a";
+}
+.ie-circle-info:before {
+  content: "\e906";
+}
+.ie-shapes:before {
+  content: "\e907";
+}
+.ie-omath:before {
+  content: "\e905";
+}
+.ie-arrow-right:before {
+  content: "\e904";
+}
+.ie-file-circle-plus:before {
+  content: "\e902";
+}
+.ie-door-open:before {
+  content: "\e903";
+}
+.ie-person-circle-check:before {
+  content: "\e901";
+}
+.ie-envelope-open-text:before {
+  content: "\e900";
+}

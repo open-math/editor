@@ -1,0 +1,43 @@
+{
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "node src/setupPreview && nuxt build",
+        "dev": "node src/setupPreview && nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "devDependencies": {
+        "@monaco-editor/loader": "^1.4.0",
+        "@nuxt/devtools": "latest",
+        "@nuxtjs/tailwindcss": "^6.10.1",
+        "@pinia/nuxt": "^0.5.1",
+        "@types/formidable": "^3.4.5",
+        "@types/js-cookie": "^3.0.6",
+        "@types/node-schedule": "^2.1.4",
+        "@types/nodemailer": "^6.4.14",
+        "chalk": "^5.3.0",
+        "formidable": "^3.5.1",
+        "glob": "^10.3.10",
+        "image-size": "^1.0.2",
+        "js-cookie": "^3.0.5",
+        "jszip": "^3.10.1",
+        "mime": "^4.0.1",
+        "node-schedule": "^2.1.1",
+        "nodemailer": "^6.9.7",
+        "nuxt": "^3.8.2",
+        "preview": "file:../preview",
+        "pinia": "^2.1.7",
+        "reflect-metadata": "^0.1.13",
+        "sass": "^1.69.5",
+        "sqlite3": "^5.1.6",
+        "tailwindcss": "^3.3.5",
+        "translator": "file:../translator",
+        "typeorm": "^0.3.17",
+        "vue": "latest",
+        "vue-router": "^4.2.5",
+        "yaml": "^2.3.4"
+    }
+}
