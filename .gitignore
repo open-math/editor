@@ -24,6 +24,4 @@ logs
 !.env.example
 
 # OMath
-.db
-.mail
-uploads
+.dev

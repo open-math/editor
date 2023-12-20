@@ -10,7 +10,7 @@ const config = useRuntimeConfig();
 const dbs = new DataSource({
     type:           'sqlite',
     database:       config.dbPath,
-    synchronize:    true, // config.mode === 'dev', ???
+    synchronize:    true,
     entities:       [
         User,
         UserConfirm,

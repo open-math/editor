@@ -1,5 +1,6 @@
 import fs from "fs";
 import nodemailer, { Transporter } from "nodemailer";
+import { isDevelopment } from "std-env";
 
 import Letter from "./Letter";
 
@@ -11,7 +12,7 @@ const emoji = ['🎓', '♾️', '🧠', '📐', '🎲', '🔢'];
 
 export default async function sendMail(letter: Letter)
 {
-    if (config.mode === 'dev')
+    if (isDevelopment)
     {
         createFakeLetter(letter);
         return;
@@ -48,6 +49,6 @@ export default async function sendMail(letter: Letter)
 
 async function createFakeLetter(letter: Letter)
 {
-    await fs.promises.mkdir('.mail', { recursive: true });
-    await fs.promises.writeFile('.mail/' + letter.to + '-' + Date.now(), JSON.stringify(letter, null, 4));
+    await fs.promises.mkdir(config.fakeMailPath, { recursive: true });
+    await fs.promises.writeFile(config.fakeMailPath + '/' + letter.to + '-' + Date.now(), JSON.stringify(letter, null, 4));
 }

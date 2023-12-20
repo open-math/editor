@@ -1,6 +1,6 @@
 import getLoggedUserId from "~/server/utils/ensureLogged";
 import formidable from "formidable";
-import { dirExists, getState } from "~/server/utils/asset";
+import { assetPath, dirExists, getState } from "~/server/utils/asset";
 
 export default defineEventHandler(async event =>
 {
@@ -28,7 +28,7 @@ export default defineEventHandler(async event =>
         maxFileSize: config.public.maxAssetSize * 1024 * 1024,
         keepExtensions: true,
         filename: (name, ext) => name + ext,
-        uploadDir: `uploads/${topicId}/${assetDir}`,
+        uploadDir: assetPath(topicId, assetDir),
         createDirsFromUploads: true,
     });
 

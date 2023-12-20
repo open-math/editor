@@ -49,13 +49,13 @@ export default defineNuxtConfig({
     //
     //
     runtimeConfig: {
-        mode: '',
         url: '',
         dbPath: '',
 
         smtpHost: '',
         smtpLogin: '',
         smtpPassword: '',
+        fakeMailPath: '',
 
         helpEmail: '',
         helpPassword: '',
