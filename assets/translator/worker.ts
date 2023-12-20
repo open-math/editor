@@ -43,6 +43,7 @@ async function init(request: InitRequest)
 
     inited = false;
     UNIQUE.map = {};
+    UNIQUE.renderedMap = {};
 
     let helper = getHelper(request);
 
@@ -102,6 +103,12 @@ async function render(request: RenderRequest)
     let parseResult = await parser.parse(request.content);
     UNIQUE.set(request.topicPart, parseResult.uniques);
 
+    for (let unique of parseResult.uniques)
+    {
+        if (unique.content)
+            UNIQUE.renderedMap[unique.id] = await renderer.renderBlocks(unique.content);
+    }
+
     let response = new Response;
         response.topicPart = request.topicPart;
         response.rendered = {
@@ -109,10 +116,11 @@ async function render(request: RenderRequest)
             uniques: {},
         };
 
-    for (let unique of parseResult.uniques)
+    for (let uniqueId of Object.keys(UNIQUE.map))
     {
-        if (unique.content)
-            response.rendered.uniques[unique.id] = await renderer.renderBlocks(unique.content);
+        let uniqueContent = UNIQUE.map[uniqueId];
+        if (uniqueContent)
+            response.rendered.uniques[uniqueId] = UNIQUE.renderedMap[uniqueId] ?? await renderer.renderBlocks(uniqueContent);
     }
 
     response.uniques = UNIQUE.getGroupedList();

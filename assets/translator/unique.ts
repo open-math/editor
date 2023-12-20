@@ -16,6 +16,7 @@ export class UniquesGrouped
 class Unique
 {
     map = {};
+    renderedMap = {};
 
     get(uniqueId: string)
     {

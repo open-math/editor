@@ -51,27 +51,6 @@ import { useUser } from '~/store/user';
         navigateTo('/topic/' + topicId);
     }
 
-    async function addTopicByUrl()
-    {
-        let url = prompt('Ссылка на статью в учебнике:');
-
-        if (!url)
-            return;
-
-        try { url = new URL(url).pathname; }
-        catch { return; }
-
-        url = url.replace(/^\/(article|summary|practicum)\//gm, '');
-
-        const topicId = await $fetch('/api/topic/createFromUrl', {
-            method: 'post',
-            headers: useRequestHeaders(['cookie']),
-            body: { url },
-        });
-
-        console.log(topicId);
-    }
-
     async function logout()
     {
         await useAuthStore().logout();
@@ -111,10 +90,6 @@ import { useUser } from '~/store/user';
                     
                     <button @click="addTopic" :title="user.canCreateTopic ? 'Новая тема' : 'Достигнут максимум тем!'" class="actionButton addTopic" :disabled="!user.canCreateTopic">
                         <i class="ie-file-circle-plus"></i>
-                    </button>
-
-                    <button @click="addTopicByUrl" :title="user.canCreateTopic ? 'Новая тема по ссылке' : 'Достигнут максимум тем!'" class="actionButton addTopic" :disabled="!user.canCreateTopic">
-                        <i class="ie-file-import"></i>
                     </button>
                 </div>
             </header>

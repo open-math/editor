@@ -52,6 +52,8 @@ export default defineNuxtConfig({
         url: '',
         dbPath: '',
 
+        adminId: '',
+
         smtpHost: '',
         smtpLogin: '',
         smtpPassword: '',

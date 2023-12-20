@@ -8,7 +8,7 @@
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "cleanup": "rimraf .dev && npx nuxi cleanup"
+        "clear-data": "rimraf .data"
     },
     "devDependencies": {
         "@monaco-editor/loader": "^1.4.0",

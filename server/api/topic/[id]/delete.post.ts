@@ -20,6 +20,5 @@ export default defineEventHandler(async event =>
 
     const db = await getDb();
     await db.manager.delete(Topic, { id: topicId });
-    console.log('Removing assets!');
     await clearAssets(topicId);
 });

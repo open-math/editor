@@ -21,6 +21,7 @@
                 language: 'markdown',
                 automaticLayout: true,
                 readOnly: !topic.canEdit,
+                wordWrap: 'on',
                 readOnlyMessage: { value: 'Только владелец темы может вносить изменения!' },
                 padding: { top: 30 },
                 renderWhitespace: 'all',
