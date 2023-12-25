@@ -42,7 +42,7 @@ class Unique
                 li.id =         idParts[1];
 
             let content = this.map[uniqueId];
-            li.title = content[0]?.title;
+            li.title = content?.[0]?.title;
 
             groups[li.topicPart].push(li);
         });
