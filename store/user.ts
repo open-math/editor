@@ -26,7 +26,10 @@ export const useUser = defineStore('user', () => {
         });
 
         if (!data || !data.value)
-            throw createError('Ошибка при полученные данных пользователя!');
+        {
+            console.warn('Ошибка при полученнии данных пользователя!');
+            return;
+        }
 
         id.value =          data.value.id;
         login.value =       data.value.login;

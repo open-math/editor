@@ -9,7 +9,7 @@
     const loaded = ref(false);
 
     const type = computed(() => {
-        if (props.asset.type === 'mp4')
+        if (['mp4', 'webm'].includes(props.asset.type))
             return 'video';
         else if (['png', 'svg', 'jpg', 'jpeg', 'gif'].includes(props.asset.type))
             return 'image';

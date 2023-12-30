@@ -21,7 +21,7 @@ export default defineEventHandler(async event =>
     if (!topicId)
         return createError('Некорректный идентификатор темы!');
 
-    const userId = await getLoggedUserId(event);
+    const userId = await getLoggedUserId(event, false);
 
     if (!(await canSeeTopic(topicId, userId)))
         return setResponseStatus(event, 403);

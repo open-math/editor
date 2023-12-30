@@ -30,6 +30,9 @@ export async function canCreateTopic(userId: number)
     const db =      await getDb();
     const dbUser =  await db.manager.findOneBy(User, { id: userId });
     
+    if (!dbUser)
+        return false;
+
     if (dbUser?.isEditor)
         return true;
 
